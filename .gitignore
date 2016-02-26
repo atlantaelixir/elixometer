@@ -8,5 +8,5 @@ log.*
 *.log
 *.*~
 .*~
-.swp
+*.swp
 elixometer-*.*.*.tar
