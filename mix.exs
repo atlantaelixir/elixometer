@@ -20,7 +20,7 @@ defmodule Elixometer.Mixfile do
 
   def application do
      [mod: {Elixometer.App, []},
-      applications: [:lager, :exometer_core, :exometer_influxdb],
+      applications: [:lager, :exometer_core, :exometer, :exometer_influxdb],
       erl_opts: [parse_transform: "lager_transform"],
       env: default_config(Mix.env)
      ]
@@ -41,6 +41,7 @@ defmodule Elixometer.Mixfile do
         {:lager, github: "basho/lager", tag: "2.1.0", override: true},
         {:hackney, ">= 0.12.0", [hex: :hackney, override: true]},
         {:exometer_core, github: "PSPDFKit-labs/exometer_core", override: true},
+        {:exometer, github: "PSPDFKit-labs/exometer"},
         {:exometer_influxdb, github: "atlantaelixir/exometer_influxdb"},
         {:excoveralls, github: "parroty/excoveralls", tag: "v0.4.5", override: true, only: :test}
     ]
